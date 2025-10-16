@@ -22,6 +22,22 @@ body {
     border: 2px solid #e2a26d;
     border-radius: 5px;
     display: flex;
+    min-height: 50px;
+}
+
+.item {
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header:has(input[value="blue"]:checked) ~ .container {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
@@ -32,28 +48,128 @@ body {
     }
 }
 
-.item {
+header:has(input[value="blue"]:checked) ~ .container .item {
     width: 25%;
-    padding: 20px;
     background-color: #0402fc;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
+
     @media (max-width: 1024px) {
     width: 50%;
     }
 }
 
-
-header:has(input[value="blue"]:checked) ~ .container .item {
-    background: royalblue;
+header:has(input[value="red"]:checked) ~ .container {
+    justify-content: center;
+    align-items: stretch;
+    gap: 15px;
 }
-
-
 
 header:has(input[value="red"]:checked) ~ .container .item {
-    background: crimson;
+    background: #fc0204;
+    flex: 1 1 15%;
 }
+
+header:has(input[value="red"]:checked) ~ .container .item:nth-child(1) { order: 3; }
+header:has(input[value="red"]:checked) ~ .container .item:nth-child(2) { order: 1; }
+header:has(input[value="red"]:checked) ~ .container .item:nth-child(3) { order: 2; }
+header:has(input[value="red"]:checked) ~ .container .item:nth-child(4) { order: 4; }
+header:has(input[value="red"]:checked) ~ .container .item:nth-child(5) { order: 5; }
+
+header:has(input[value="red"]:checked) ~ .container .item:nth-child(1) {
+    flex: 2 1 30%;
+    font-weight: bold;
+    position: relative;
+}
+
+header:has(input[value="red"]:checked) ~ .container .item:nth-child(1)::after {
+    content: "(Jestem większy i na środku!)";
+    display: block;
+    font-size: 0.8em;
+    font-weight: normal;
+    margin-top: 8px;
+}
+
+
+@media (max-width: 1024px) {
+    header:has(input[value="red"]:checked) ~ .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header:has(input[value="red"]:checked) ~ .container .item {
+        flex: 1 1 40%;
+    }
+
+    header:has(input[value="red"]:checked) ~ .container .item:nth-child(1) {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+header:has(input[value="green"]:checked) ~ .container {
+    justify-content: center;
+    align-items: stretch;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+
 header:has(input[value="green"]:checked) ~ .container .item {
-    background: seagreen;
+    background: #047b04;
+}
+
+header:has(input[value="green"]:checked) ~ .container .item:nth-child(1) {
+    flex-grow: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+header:has(input[value="green"]:checked) ~ .container .item:nth-child(2) {
+    flex-grow: 4;
+}
+header:has(input[value="green"]:checked) ~ .container .item:nth-child(3) {
+    flex-grow: 3;
+}
+header:has(input[value="green"]:checked) ~ .container .item:nth-child(4) {
+    flex-grow: 2;
+}
+header:has(input[value="green"]:checked) ~ .container .item:nth-child(5) {
+    flex-grow: 1;
+}
+
+header:has(input[value="green"]:checked) ~ .container .item:nth-child(1)::before {
+    content: "😀";
+    transform: scale(2);
+    line-height: 0;
+}
+header:has(input[value="green"]:checked) ~ .container .item:nth-child(1)::after {
+    content: "😀";
+    transform: scale(2);
+    line-height: 0;
+}
+
+@media (max-width: 1024px) {
+    header:has(input[value="green"]:checked) ~ .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+    header:has(input[value="green"]:checked) ~ .container .item:nth-child(1) {
+    width: 85%;
+}
+header:has(input[value="green"]:checked) ~ .container .item:nth-child(2) {
+    width: 70%;
+}
+header:has(input[value="green"]:checked) ~ .container .item:nth-child(3) {
+    width: 55%;
+}
+header:has(input[value="green"]:checked) ~ .container .item:nth-child(4) {
+    width: 40%;
+}
+header:has(input[value="green"]:checked) ~ .container .item:nth-child(5) {
+    width: 25%;
+}
 }
