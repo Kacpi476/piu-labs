@@ -1,19 +1,124 @@
 /* Minimalny reset  */
 html {
-  font-size: 16px; /* bazowy rozmiar czcionki */
-  font-family: system-ui, sans-serif; /* font systemowy */
-  line-height: 1.5; /* lepsza czytelność */
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
 }
+
 body {
   margin: 1rem;
   padding: 0;
+  background: #e6e6e6;
 }
 
 a {
-  color: #0066cc; /* niebieski kolor linków */
-  text-decoration: none; /* bez podkreślenia */
-  font-size: 1.4rem;
+  color: #0074d9;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.2s;
 }
 a:hover {
-  text-decoration: underline; /* podkreślenie przy najechaniu */
+  text-decoration: underline;
+  color: #005bb5;
+}
+
+.container {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 32% 32% 32%;
+  grid-template-rows: auto 1fr;
+  gap: 2rem 4%;
+  padding: 1.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  background: #fff;
+  border-radius: 18px;
+  border: 2px solid #ccc;
+  padding: 1.2rem 1.5rem;
+}
+
+.header .buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.header .counter {
+  text-align: center;
+  font-weight: 600;
+  padding: 14px;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  background: #cfe8ff;
+  font-size: 1.15rem;
+}
+
+.columntitle {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.board {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 260px;
+  gap: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+button {
+  border-radius: 50%;
+  padding: 7px 10px;
+  cursor: pointer;
+  border: 1px solid #444;
+  background: #fafafa;
+  transition: scale 0.15s;
+}
+button:hover {
+  scale: 1.08;
+}
+
+.shape {
+  border-radius: 10px;
+  width: 85%;
+  min-height: 3.6rem;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  border: 2px solid #111;
+  background: #fffef2;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.4rem;
+}
+.shape:hover {
+  background: #fff8d6;
+  transform: translateY(-2px);
+}
+
+.shape .tekst {
+  font-size: 1.15rem;
+  line-height: 1.45rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.KarteczkiButtony {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 0.8rem;
 }
