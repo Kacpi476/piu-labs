@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script type="module" src="./components/product-card.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="product-list">
+      <product-card>
+        <img
+          slot="image"
+          src="img/linen-dress.jpg"
+          height="250px"
+          width="280px"
+          alt="Zdjęcie lnianej sukienki"
+        />
+        <h2 slot="name">Lniana Sukienka Ocean Breeze</h2>
+        <div slot="price">179.00 PLN</div>
+        <div slot="sizes">
+          <button>S</button><button>M</button><button>L</button>
+        </div>
+      </product-card>
+
+      <product-card>
+        <img
+          slot="image"
+          src="img/leather-bag.jpg"
+          height="250px"
+          width="280px"
+          alt="Zdjęcie skórzanej torby"
+        />
+        <h2 slot="name">Torba Skórzana Explorer</h2>
+        <div slot="price">349.00 PLN</div>
+        <div slot="colors">
+          <span
+            style="
+              background-color: rgb(102, 51, 0);
+              width: 18px;
+              height: 18px;
+              border-radius: 50%;
+              display: inline-block;
+              margin-right: 6px;
+              vertical-align: middle;
+              border: 1px solid rgba(0, 0, 0, 0.12);
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+            "
+            aria-label="Brązowy"
+          ></span>
+        </div>
+      </product-card>
+
+      <product-card>
+        <img
+          slot="image"
+          src="img/denim-shorts.jpg"
+          height="250px"
+          width="280px"
+          alt="Zdjęcie jeansowych szortów"
+        />
+        <h2 slot="name">Szorty Jeansowe Sunset</h2>
+        <div slot="price">129.00 PLN</div>
+        <div slot="sizes">
+          <button>XS</button><button>S</button><button>M</button><button>L</button>
+        </div>
+      </product-card>
+
+      <product-card>
+        <img
+          slot="image"
+          src="img/wool-scarf.jpg"
+          height="220px"
+          width="270px"
+          alt="Zdjęcie wełnianego szalika"
+        />
+        <h2 slot="name">Szalik Wooly Soft</h2>
+        <div slot="price">89.00 PLN</div>
+        <span slot="promotion">NOWOŚĆ</span>
+      </product-card>
+
+      <product-card>
+        <img
+          slot="image"
+          src="img/raincoat.jpg"
+          height="250px"
+          width="270px"
+          alt="Zdjęcie płaszcza przeciwdeszczowego"
+        />
+        <h2 slot="name">Płaszcz Przeciwdeszczowy Storm</h2>
+        <div slot="price">
+          219.00 PLN <span class="old-price">299.00 PLN</span>
+        </div>
+        <div slot="colors">
+          <span
+            style="
+              background-color: rgb(0, 102, 153);
+              width: 18px;
+              height: 18px;
+              border-radius: 50%;
+              display: inline-block;
+              margin-right: 6px;
+              vertical-align: middle;
+              border: 1px solid rgba(0, 0, 0, 0.12);
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+            "
+            aria-label="Niebieski"
+          ></span>
+        </div>
+        <div slot="sizes">
+          <button>M</button><button>L</button><button>XL</button>
+        </div>
+        <span slot="promotion">WYPRZEDAŻ</span>
+      </product-card>
+
+      <product-card>
+        <img
+          slot="image"
+          src="img/sneakers.jpg"
+          height="300px"
+          width="270px"
+          alt="Zdjęcie sneakersów"
+        />
+        <h2 slot="name">Sneakersy Urban Runner</h2>
+        <div slot="price">299.00 PLN</div>
+        <div slot="colors">
+          <span
+            style="
+              background-color: rgb(255, 255, 255);
+              width: 18px;
+              height: 18px;
+              border-radius: 50%;
+              display: inline-block;
+              margin-right: 6px;
+              vertical-align: middle;
+              border: 1px solid rgba(0, 0, 0, 0.12);
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+            "
+            aria-label="Biały"
+          ></span>
+        </div>
+        <div slot="sizes">
+          <button>38</button><button>40</button><button>42</button>
+        </div>
+      </product-card>
+    </div>
+  </body>
+</html>
