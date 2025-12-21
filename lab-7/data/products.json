@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Lniana Sukienka Ocean Breeze",
+    "price": 179,
+    "image": "img/linen-dress.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Torba Skórzana Explorer",
+    "price": 349,
+    "image": "img/leather-bag.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Szorty Jeansowe Sunset",
+    "price": 129,
+    "image": "img/denim-shorts.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Szalik Wooly Soft",
+    "price": 89,
+    "image": "img/wool-scarf.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Sneakersy Urban Runner",
+    "price": 299,
+    "image": "img/sneakers.jpg"
+  }
+]
